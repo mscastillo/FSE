@@ -26,6 +26,6 @@ To initialize the *tSNE* method, the script first computes the PCA and finds the
 
 `tSNE_analysis.m` will outputs a set of 2D and 3D plots with the PCA and the tSNE results. The 2D figure also includes the results of the QDA.
 
-![2D tSNE figure](https://github.com/mscastillo/Analyses/blob/master/tSNE_analysis/2DtSNE.jpg)
+![2D and 3D tSNE plots](https://github.com/mscastillo/Analyses/blob/master/tSNE_analysis/tSNE.jpeg)
 
 Additionally, it will output a set of *csv* files with the PCA, the 2D-tSNE and the 3D-tSNE coordinates.
