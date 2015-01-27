@@ -12,11 +12,12 @@ The script depends on the [MATLAB implementation](http://lvdmaaten.github.io/tsn
 
 `tSNE_analysis.m` takes as an input an *Excel* or *csv* file with a header and the first and second columns corresponding to the observations ID and theirs known classes.
 
-| NAMES   | CLASSES | gene001 | gene002 | gene003 | gene004 |
-|---------|---------|---------|---------|---------|---------|
-| cell001 | class01 | 1.03    | 2.39    | -2.36   | 1.02    |
-| cell002 | class01 | 2.65    | -1.78   | -3.01   | 2.37    |
-| cell003 | class02 | 0.54    | 2.66    | 5.12    | -2.45   |
+| NAMES   | CLASSES | gene001 | gene002 | gene003 | gene004 | gene005 |
+|---------|---------|---------|---------|---------|---------|---------|
+| cell001 | class01 | 1.03    | 2.39    | -2.36   | 1.02    | -0.56   |
+| cell002 | class01 | 2.65    | -1.78   | -3.01   | 2.37    | 1.90    |
+| cell003 | class02 | 0.54    | 2.66    | 5.12    | -2.45   | 4.32    |
+
 
 *tSNE* is an stochastic method that will produce a different result every time. For repeatability of the results, the randomness is controlled by definying the random seed at the beginning.
 
