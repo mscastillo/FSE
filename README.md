@@ -12,6 +12,20 @@ The script depends on the [MATLAB implementation](http://lvdmaaten.github.io/tsn
 
 `tSNE_analysis.m` takes as an input an *Excel* or *csv* file with the next format:
 
-- First column: the name of the class (cell-type, treatment, stage, etc)
-- Second column: the name of the sample
-- First row: a header with the name of the genes at each column. Notice that the first two cells of the header corresponds to the sample's class and samples's name
+| NAMES   | CLASSES | gene001 | gene002 | gene003 | gene004 |
+|---------|---------|---------|---------|---------|---------|
+| cell001 | class01 | 1.03    | 2.39    | -2.36   | 1.02    |
+| cell002 | class01 | 2.65    | -1.78   | -3.01   | 2.37    |
+| cell003 | class02 | 0.54    | 2.66    | 5.12    | -2.45   |
+
+with a header and the first two coulmns corresponding to the observations' ID and theirs kwonw classes.
+
+*tSNE* is an stochastic method that will produce a different result every time. For repeatability of the results, the randomness is controlled by definying the random seed at the beginning.
+
+To initialize the *tSNE* method, the script first computes the PCA and finds the number of components comprising a given level of variability. For convenience, PCA and tSNE are rotated using the varimax transformation.
+
+> [Best Practices in Exploratory Factor Analysis](http://pareonline.net/pdf/v10n7.pdf). *Practical Assessment, Research & Evaluation* (2005).
+
+`tSNE_analysis.m` will outputs a set of 2D and 3D plots with the PCA and the tSNE results. The 2D figure also includes the results of the QDA.
+
+Additionally, it will output a set of *csv* files with the PCA, the 2D-tSNE and the 3D-tSNE coordinates.
