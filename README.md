@@ -22,7 +22,7 @@ This repository includes a set of scripts to perform a dimensionality reduction 
 
 > [Visualizing High-Dimensional Data Using t-SNE](http://lvdmaaten.github.io/tsne/). *Journal of Machine Learning Research* (2008).
 
-The main script, `tSNE_analysis.m`, depends on the [MATLAB implementation](http://lvdmaaten.github.io/tsne/) of the tSNE method. Edit the parameters on the header to point to the full/relative path of the tSNE folder. Once run, the script ask for an input file with the data, in the format described above.
+The main script, `tSNE_analysis.m`, depends on the [MATLAB implementation](http://lvdmaaten.github.io/tsne/) of the tSNE method. Edit the parameters on the the top of the script for adding the full/relative path to the tSNE algorithm. Once run, the script ask for an input file with the data, in the format described above.
 
 tSNE is an stochastic method that will produce a different result every time. For repeatability, the randomness is controlled by fixing the random seed. To initialize the tSNE solution, the script first computes the PCA and finds the number of components comprising a given level of variability. For convenience, PCA and tSNE results are rotated using the varimax transformation.
 
