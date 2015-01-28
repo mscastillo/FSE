@@ -1,5 +1,5 @@
-Feature Selection and Extraction (FS&E)
-=======================================
+Feature Selection and Extraction (FSE)
+======================================
 
 This repository includes different analyses to explore high dimensional data using different Machine Learning approaches:
 
@@ -33,3 +33,8 @@ tSNE is an stochastic method that will produce a different result every time. Fo
 ![2D and 3D tSNE plots](https://github.com/mscastillo/Analyses/blob/master/tSNE_analysis/tSNE.jpeg)
 
 Additionally, it will output a set of *csv* files with the PCA, the 2D-tSNE and the 3D-tSNE coordinates.
+
+
+# `BDT_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
+
+This repository performs a emsembled classificator using a *Bagger Decision Tree* (BDT).
