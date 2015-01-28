@@ -5,12 +5,12 @@ This repository includes different analyses to reduce the dimensionality of a da
 
 All the analyses have the same input: an *Excel* or *csv* file with observations at rows and variables at columns. For instances, in single-cell expression data, each row is the expression profile of a single cell. The table must have a header with the names of the variables (genes names). In addition, the first and second columns must correspond to an unique observation name or ID and their known class (see next example).
 
- |  NAMES  |  CLASSES | gene001 | gene002 | gene003 | gene004 | gene005 | gene006 |
- |:-------:|:--------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
- | cell001 |  class01 |   1.03  |   2.39  |  -2.36  |   1.02  |   4.21  |  -0.56  |
- | cell002 |  class01 |   2.65  |  -1.78  |  -3.01  |   2.37  |   2.23  |   1.90  |
- | cell003 |  class02 |   0.54  |   2.66  |   5.12  |  -2.45  |   3.56  |   4.32  |
- | cell004 |  class02 |  -5.02  |  -3.56  |   0.23  |   0.12  |   1.52  |   2.35  |
+|  NAMES  |  CLASSES | gene001 | gene002 | gene003 | gene004 | gene005 | gene006 |
+|:-------:|:--------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
+| cell001 |  class01 |   1.03  |   2.39  |  -2.36  |   1.02  |   4.21  |  -0.56  |
+| cell002 |  class01 |   2.65  |  -1.78  |  -3.01  |   2.37  |   2.23  |   1.90  |
+| cell003 |  class02 |   0.54  |   2.66  |   5.12  |  -2.45  |   3.56  |   4.32  |
+| cell004 |  class02 |  -5.02  |  -3.56  |   0.23  |   0.12  |   1.52  |   2.35  |
 
 
 # `tSNE_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
