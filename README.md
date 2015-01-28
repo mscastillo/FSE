@@ -1,7 +1,9 @@
 Dimensionality Reduction (DR)
 =============================
 
-This repository includes different analyses to reduce the dimensionality of a given dataset.
+This repository includes different analyses to reduce the dimensionality of a given dataset:
+
+- [PCA and tSNE](https://github.com/mscastillo/DR#tsne_analysis-octocat)
 
 All the analyses have the same input: an *Excel* or *csv* file with observations at rows and variables at columns. For instances, in single-cell expression data, each row would be the expression profile of a single experiment. The table must include a header with the names of the variables (the genes names). In addition, the first and second columns must correspond to an unique observation ID and their known class (see next example).
 
