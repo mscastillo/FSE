@@ -1,9 +1,9 @@
-Analyses
-========
+Dimensionality Reduction (DR)
+=============================
 
-This repository includes different analyses to reduce the dimensionality of a dataset.
+This repository includes different analyses to reduce the dimensionality of a given dataset.
 
-All the analyses have the same input: an *Excel* or *csv* file with observations at rows and variables at columns. For instances, in single-cell expression data, each row is the expression profile of a single cell. The table must have a header with the names of the variables (genes names). In addition, the first and second columns must correspond to an unique observation name or ID and their known class (see next example).
+All the analyses have the same input: an *Excel* or *csv* file with observations at rows and variables at columns. For instances, in single-cell expression data, each row would be the expression profile of a single experiment. The table must include a header with the names of the variables (the genes names). In addition, the first and second columns must correspond to an unique observation ID and their known class (see next example).
 
 |  NAMES  |  CLASSES | gene001 | gene002 | gene003 | gene004 | gene005 | gene006 |
 |:-------:|:--------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
