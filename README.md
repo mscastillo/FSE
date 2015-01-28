@@ -22,7 +22,7 @@ This repository includes a set of scripts to perform a dimensionality reduction 
 
 > [Visualizing High-Dimensional Data Using t-SNE](http://lvdmaaten.github.io/tsne/). *Journal of Machine Learning Research* (2008).
 
-The main script, `tSNE_analysis.m`, depends on the [MATLAB implementation](http://lvdmaaten.github.io/tsne/) of the tSNE method. The original code from the tSNE algorithm can be found in [Simple_tSNE/](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis/Simple_tSNE). Check that the path to it is correctly added at the begining of the main script.
+The main script, `tSNE_analysis.m`, depends on the [MATLAB implementation](http://lvdmaaten.github.io/tsne/) of the tSNE method. The original code from the tSNE algorithm can be found in [Simple_tSNE/](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis/Simple_tSNE). Check that the path to it is added correctly at the begining of the main script.
 
 tSNE is an stochastic method that will produce a different result every time. For repeatability, the randomness is controlled by fixing the seed of the random generator. To initialize the tSNE solution, the script first computes the PCA and finds the number of components comprising a given level of variability.
 
@@ -32,7 +32,7 @@ tSNE is an stochastic method that will produce a different result every time. Fo
 
 ![2D and 3D tSNE plots](https://github.com/mscastillo/Analyses/blob/master/tSNE_analysis/tSNE.jpeg)
 
-Finally, the script it will output a set of *csv* files with the PCA, the 2D-tSNE and the 3D-tSNE coordinates.
+Finally, the script will output a set of *csv* files with the PCA, the 2D-tSNE and the 3D-tSNE coordinates.
 
 
 # `BDT_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
