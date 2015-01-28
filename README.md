@@ -10,10 +10,10 @@ All the analyses have the same input: an *Excel* or *csv* file with observations
 
 |  NAMES  |  CLASSES | gene001 | gene002 | gene003 | gene004 | gene005 | gene006 |
 |:-------:|:--------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
-| cell001 |  class01 |   1.03  |   2.39  |  -2.36  |   1.02  |   4.21  |  -0.56  |
-| cell002 |  class01 |   2.65  |  -1.78  |  -3.01  |   2.37  |   2.23  |   1.90  |
-| cell003 |  class02 |   0.54  |   2.66  |   5.12  |  -2.45  |   3.56  |   4.32  |
-| cell004 |  class02 |  -5.02  |  -3.56  |   0.23  |   0.12  |   1.52  |   2.35  |
+| cell01  |  class01 |   1.03  |   2.39  |  -2.36  |   1.02  |   4.21  |  -0.56  |
+| cell02  |  class01 |   2.65  |  -1.78  |  -3.01  |   2.37  |   2.23  |   1.90  |
+| cell03  |  class02 |   0.54  |   2.66  |   5.12  |  -2.45  |   3.56  |   4.32  |
+| cell04  |  class02 |  -5.02  |  -3.56  |   0.23  |   0.12  |   1.52  |   2.35  |
 
 
 # `tSNE_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
