@@ -1,7 +1,7 @@
 Dimensionality Reduction (DR)
 =============================
 
-This repository includes different analyses to reduce the dimensionality of a given dataset:
+This repository includes different analyses to explore and reduce the dimensionality of a given dataset:
 
 - [PCA and tSNE](https://github.com/mscastillo/DR#tsne_analysis-octocat)
 
