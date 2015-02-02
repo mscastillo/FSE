@@ -15,17 +15,17 @@ This repository includes a set of scripts to perform a dimensionality reduction 
 
 > [Visualizing High-Dimensional Data Using t-SNE](http://lvdmaaten.github.io/tsne/). *Journal of Machine Learning Research* (2008).
 
-The main script, `tSNE_analysis.m`, depends on the [MATLAB implementation](http://lvdmaaten.github.io/tsne/) of the tSNE method. The original code from the tSNE algorithm can be found in [Simple_tSNE/](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis/Simple_tSNE). Check that the path to it is added correctly at the begining of the main script.
+The main script, `tSNE_analysis.m`, depends on the [MATLAB implementation](http://lvdmaaten.github.io/tsne/) of the tSNE method. The original code from the tSNE algorithm can be found in [Simple_tSNE/](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis/Simple_tSNE). Check that the path to it is added correctly at the begining of the main script. The method preprocess the data using PCA and choosing a given number of initial dimensions to start. Instead of choosing an arbitrary number of componenets, the main script computes the PCA and chooses the number of components comprising a given level of variability (i.e. 95%). 
 
-tSNE is an stochastic method that will produce a different result every time. For repeatability, the randomness is controlled by fixing the seed of the random generator. To initialize the tSNE solution, the script first computes the PCA and finds the number of components comprising a given level of variability.
-
+tSNE is an stochastic method that will produce a different result every time. For repeatability, the randomness is controlled by fixing the seed of the random generator. For convenience, PCA and tSNE results are rotated using the varimax transformation. 
+ 
 > [Best Practices in Exploratory Factor Analysis](http://pareonline.net/pdf/v10n7.pdf). *Practical Assessment, Research & Evaluation* (2005).
 
-`tSNE_analysis.m` will outputs a set of 2D and 3D plots with the PCA and the tSNE results. For convenience, PCA and tSNE results are rotated using the varimax transformation. The 2D figure also includes a classification using the Quadratic Discriminant Analysis (QDA).
+`tSNE_analysis.m` will outputs a set of 2D and 3D plots with the PCA and the tSNE results. The 2D figure also includes a classification using the Quadratic Discriminant Analysis (QDA).
 
 ![2D and 3D tSNE plots](https://github.com/mscastillo/FSE/blob/master/Examples/tSNE.jpg)
 
-Finally, the script will output a set of *[csv](https://github.com/mscastillo/FSE/blob/master/Examples)* files with the PCA, the 2D-tSNE and the 3D-tSNE coordinates.
+Finally, the script will output a set of *[csv](https://github.com/mscastillo/FSE/blob/master/Examples)* files with the (*i*) PCA,  (*ii*) the 2D-tSNE and  (*iii*) the 3D-tSNE coordinates.
 
 
 # `BDT_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
