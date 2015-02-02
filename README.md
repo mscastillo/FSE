@@ -23,9 +23,9 @@ tSNE is an stochastic method that will produce a different result every time. Fo
 
 `tSNE_analysis.m` will outputs a set of 2D and 3D plots with the PCA and the tSNE results. For convenience, PCA and tSNE results are rotated using the varimax transformation. The 2D figure also includes a classification using the Quadratic Discriminant Analysis (QDA).
 
-![2D and 3D tSNE plots](https://github.com/mscastillo/Analyses/blob/master/tSNE_analysis/tSNE.jpeg)
+![2D and 3D tSNE plots](https://github.com/mscastillo/FSE/blob/master/Examples/tSNE.jpg)
 
-Finally, the script will output a set of *csv* files with the PCA, the 2D-tSNE and the 3D-tSNE coordinates.
+Finally, the script will output a set of *[csv](https://github.com/mscastillo/FSE/blob/master/Examples)* files with the PCA, the 2D-tSNE and the 3D-tSNE coordinates.
 
 
 # `BDT_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
