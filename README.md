@@ -25,7 +25,7 @@ tSNE is an stochastic method that will produce a different result every time. Fo
 
 ![2D and 3D tSNE plots](https://github.com/mscastillo/FSE/blob/master/Examples/tSNE.jpg)
 
-Finally, the script will output a set of *[csv](https://github.com/mscastillo/FSE/blob/master/Examples)* files with (*i*) the PCA, (*ii*) the 2D-tSNE and (*iii*) the 3D-tSNE coordinates. Before plooting the 3D analysis, users may interact with the 2D plot to manually pick a subset of samples. After choosing the super-cells (by doing click or draging) an additional *txt* file with the selected samples ID will be generated.
+Finally, the script will output a set of *[csv](https://github.com/mscastillo/FSE/blob/master/Examples)* files with (*i*) the PCA, (*ii*) the 2D-tSNE and (*iii*) the 3D-tSNE coordinates. Before plooting the 3D analysis, users may interact with the 2D plot to manually pick a subset of samples. After choosing the super-subset (by doing click or draging) an additional *txt* file with the selected samples ID will be generated.
 
 
 # `BDT_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
