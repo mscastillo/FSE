@@ -3,8 +3,8 @@ Feature Selection and Extraction (FSE)
 
 This repository includes different analyses to explore high dimensional data using different Machine Learning approaches:
 
-- [PCA and tSNE](#tsne_analysis-octocat)
-- [Decision trees](#tsne_analysis-octocat)
+ 1. [PCA and tSNE](#tsne_analysis-octocat)
+ 2. [Decision trees](#tsne_analysis-octocat)
 
 All the analyses takes the same input: a data table with observations at rows and variables at columns. The table must include a header with the names of the variables. In addition, the first and second columns must correspond to an unique sample identifier and their known class. The input table could be provided in two formats: *Excel* and *csv*. Find next some toy examples:
 
