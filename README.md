@@ -6,7 +6,7 @@ This repository includes different analyses to explore high dimensional data usi
  * [PCA and tSNE](#tsne_analysis-octocat)
  * [Decision trees](#tsne_analysis-octocat)
 
-All the analyses takes the same input: a data table with observations at rows and variables at columns. The input table could be provided in any of the next two formats: *[Excel](https://github.com/mscastillo/Analyses/tree/master/Examples/data.xls)* or *[csv](https://github.com/mscastillo/Analyses/tree/master/Examples/data.csv)*. The input table should include a header with the names of the variables. In addition, the first and second columns must correspond to an unique sample identifier and their known class.
+All the analyses takes the same input: a data table with observations at rows and variables at columns. The input table could be provided in any of the next two formats: *[Excel](https://github.com/mscastillo/Analyses/tree/master/Examples/data.xls)* or *[csv](https://github.com/mscastillo/Analyses/tree/master/Examples/data.csv)*. Tables should include a header with the names of the variables. In addition, the first and second columns should have the sample class and a unique sample identifier respectively.
 
 
 # `tSNE_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
