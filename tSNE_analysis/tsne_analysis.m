@@ -32,7 +32,7 @@ clc ; % this clears the command window log
 %     recomend to use by default a high value (for instances, the 95%).
 %     For example:
 %     PCA_level = 95 ;
-      PCA_level = 100 ;
+      PCA_level = 95 ;
 %
 % (3) <seed> This parameter is the seed of the random-number generator. By
 %     fixing it, we have controlled the randomness of the results and we 
