@@ -15,7 +15,7 @@ This repository includes a set of scripts to perform a dimensionality reduction 
 
 > [Visualizing High-Dimensional Data Using t-SNE](http://lvdmaaten.github.io/tsne/). *Journal of Machine Learning Research* (2008).
 
-The main script, `tSNE_analysis.m`, depends on the [MATLAB implementation](http://lvdmaaten.github.io/tsne/) of the tSNE method. The original code from the tSNE algorithm can be found in [Simple_tSNE/](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis/Simple_tSNE). Check that the path to it is added correctly at the begining of the main script. The method preprocess the data using PCA and choosing a given number of initial dimensions to start. Instead of choosing an arbitrary number of componenets, the main script computes the PCA and chooses the number of components comprising a given level of variability (i.e. 95%). 
+The main script, `tSNE_analysis.m`, depends on the [MATLAB implementation](http://lvdmaaten.github.io/tsne/) of the tSNE method. The original code from the tSNE algorithm can be found in [Simple_tSNE/](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis/Simple_tSNE). Check that the path to it is added correctly at the begining of the main script. The method preprocesses the data using PCA and choosing a given number of initial dimensions to compute an initial solution. Instead of choosing an arbitrary number of components, the main script performs PCA and chooses the number of components comprising a given level of variability. By default, `PCA_level` is set to keep the 95% of the variance. To skip this preprocessing step, st it up as 100%. 
 
 tSNE is an stochastic method that will produce a different result every time. For repeatability, the randomness is controlled by fixing the seed of the random generator. For convenience, PCA and tSNE results are rotated using the varimax transformation.
  
@@ -25,7 +25,7 @@ tSNE is an stochastic method that will produce a different result every time. Fo
 
 ![2D and 3D tSNE plots](https://github.com/mscastillo/FSE/blob/master/Examples/tSNE.jpg)
 
-Finally, the script will output a set of *[csv](https://github.com/mscastillo/FSE/blob/master/Examples)* files with (*i*) the PCA, (*ii*) the 2D-tSNE and (*iii*) the 3D-tSNE coordinates.
+Finally, the script will output a set of *[csv](https://github.com/mscastillo/FSE/blob/master/Examples)* files with (*i*) the PCA, (*ii*) the 2D-tSNE and (*iii*) the 3D-tSNE coordinates. Before plooting the 3D analysis, users may interact with the 2D plot to manually pick a subset of samples. After choosing the super-cells (by doing click or draging) an additional *txt* file with the selected samples ID will be generated.
 
 
 # `BDT_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
