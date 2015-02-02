@@ -6,14 +6,10 @@ This repository includes different analyses to explore high dimensional data usi
 - [PCA and tSNE](#tsne_analysis-octocat)
 - [Decision trees](#tsne_analysis-octocat)
 
-All the analyses have the same input: an *Excel* or *csv* file with observations at rows and variables at columns. For instances, in single-cell expression data, each row would be the expression profile of a single experiment. The table must include a header with the names of the variables (the genes names). In addition, the first and second columns must correspond to an unique observation ID and their known class (see next example).
+All the analyses takes the same input: a data table with observations at rows and variables at columns. The table must include a header with the names of the variables. In addition, the first and second columns must correspond to an unique sample identifier and their known class. The input table could be provided in two formats: *Excel* and *csv*. Find next some toy examples:
 
-|  NAMES  |  CLASSES | gene001 | gene002 | gene003 | gene004 | gene005 | gene006 |
-|:-------:|:--------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
-| cell01  |  class01 |   1.03  |   2.39  |  -2.36  |   1.02  |   4.21  |  -0.56  |
-| cell02  |  class01 |   2.65  |  -1.78  |  -3.01  |   2.37  |   2.23  |   1.90  |
-| cell03  |  class02 |   0.54  |   2.66  |   5.12  |  -2.45  |   3.56  |   4.32  |
-| cell04  |  class02 |  -5.02  |  -3.56  |   0.23  |   0.12  |   1.52  |   2.35  |
+- [data.xls](https://github.com/mscastillo/Analyses/tree/master/Examples/data.xls)
+- [data.csv](https://github.com/mscastillo/Analyses/tree/master/Examples/data.csv)
 
 
 # `tSNE_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
