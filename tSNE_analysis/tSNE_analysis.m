@@ -32,7 +32,7 @@ clc ; % this clears the command window log
 %     recomend to use by default a high value(for instances, the 95%).
 %     For example:
 %     PCA_level = 95 ;
-      PCA_level = 95 ;
+      PCA_level = 100 ;
 %
 % (3) <seed> This parameter is the seed of the random-number generator. By
 %     fixing it, we have controlled the randomness of the results and we 
@@ -124,8 +124,8 @@ for k = 1:C
    disp( [char(10),'Performing PCA analysis...'] ) ;
    [coefficient,score,latent,tsquare,explained] = pca( data,'Algorithm','svd' ) ;
  % score*coefficient' = data - repmat(mean(data),size(data,1),1)
-   PCA2 = score(:,1:2) ;
-   PCA3 = score(:,1:3) ;
+   PCA2 = rotatefactors(score(:,1:2),'Method','varimax') ;
+   PCA3 = rotatefactors(score(:,1:3),'Method','varimax') ;
    IC = cumsum(explained) ;
    disp( ['  Information content on the two first component: ',num2str(round(IC(2))),'%.'] ) ;
    disp( ['  Information content on the three first component: ',num2str(round(IC(3))),'%.'] ) ;
@@ -142,8 +142,8 @@ for k = 1:C
     x_max = max(PCA2(:,1))+d ;
     d = 0.1*( max(PCA2(:,2)) - min(PCA2(:,2)) ) ;
     y_min = min(PCA2(:,2))-d ; 
-    y_max = max(PCA2(:,2))+d ; 
-    [ x y ] = meshgrid( x_min:0.5:x_max,y_min:0.5:y_max ) ;
+    y_max = max(PCA2(:,2))+d ;
+    [ x y ] = meshgrid( x_min:(x_max-x_min)/100:x_max,y_min:(y_max-y_min)/100:y_max ) ;
     x = x(:) ; y = y(:) ;
     classification_result = classify( [x y],PCA2(:,1:2),classes,'quadratic' ) ;
     figure(1) ; set(1,'WindowStyle','docked') ;
@@ -183,7 +183,7 @@ for k = 1:C
     zlabel('PC3 (third component)') ; zlim( [z_min z_max] ) ; 
 % plotting PCA information
   figure(3) ; set(3,'WindowStyle','docked') ; cla ;   
-  noc = sum(IC <= PCA_level)+1 ;
+  noc = min( sum(IC <= PCA_level)+1,G )  ;
   title(['PCA analysis. The ',num2str(PCA_level),'% is explained by the first ',num2str(noc),' copmonents.']) ;   
   subplot(2,2,[1,2]) ; title(['Percentage of explained variance accumulated at each PCA component.']) ;
   hold on ; cla ;
@@ -217,7 +217,7 @@ for k = 1:C
    disp( ['  no_dims = ',num2str(no_dims),', the desidered dimension reduction.'] ) ;
    disp( ['  initial_dims = ',num2str(noc),', the number of PCA components to initialize the algorithm.',] ) ;
 %  computing tSNE analysis
-   tSNE2 = tsne( data,[],no_dims,initial_dims ) ;
+   tSNE2 = rotatefactors(tsne( data,[],no_dims,initial_dims ),'Method','varimax') ;
 %  writting output file
    tsne_header = repmat({'tSNE'},1,no_dims) ;
    for k=1:no_dims
@@ -238,7 +238,7 @@ for k = 1:C
   y_min = min(tSNE2(:,2)) - d*2 ;
   y_max = max(tSNE2(:,2)) + d ;
     
-  [ x y ] = meshgrid( x_min:x_max,y_min:y_max ) ;
+  [ x y ] = meshgrid( x_min:(x_max-x_min)/100:x_max,y_min:(y_max-y_min)/100:y_max ) ;
   x = x(:) ; y = y(:) ;
   classification_result = classify( [x y],tSNE2(:,1:2),classes,'quadratic' ) ;
     
@@ -296,7 +296,7 @@ for k = 1:C
    disp( ['  no_dims = ',num2str(no_dims),', the desidered dimension reduction.'] ) ;
    disp( ['  initial_dims = ',num2str(noc),', the number of PCA components to initialize the algorithm.',] ) ;
 % computing tSNE analysis
-  tSNE3 = tsne( data,[],no_dims,initial_dims ) ;
+  tSNE3 = rotatefactors(tsne( data,[],no_dims,initial_dims ),'Method','varimax') ;
 % writting output file
   output_file = strjoin( [ input_path,file_name,'__tSNE3D__seed_',num2str(seed),'__PCA_level_',num2str(PCA_level),'.csv' ],'' ) ;
   fid = fopen(output_file,'w') ;
@@ -308,6 +308,12 @@ for k = 1:C
     figure(6) ; title(['3D tSNE analysis with ',num2str(initial_dims),' initial dimensions.']) ;
     set(6,'WindowStyle','docked') ;
     hold on ; cla ;
+    d = 0.1*( max(tSNE3(:,1)) - min(tSNE3(:,1)) ) ;
+    x_min = min(tSNE3(:,1)) - d ;
+    x_max = max(tSNE3(:,1))+d*2 ;
+    d = 0.1*( max(tSNE3(:,2)) - min(tSNE3(:,2)) ) ;
+    y_min = min(tSNE3(:,2)) - d*2 ;
+    y_max = max(tSNE3(:,2)) + d ;
     d = 0.1*( max(tSNE3(:,3)) - min(tSNE3(:,3)) ) ;
     z_min = min(tSNE3(:,3)) - d ;
     z_max = max(tSNE3(:,3)) + d ;
@@ -322,4 +328,3 @@ for k = 1:C
     ylim( [y_min y_max] ) ; ylabel('tSNE2') ;
     zlim( [z_min z_max] ) ; zlabel('tSNE3') ;
     legend( text,'EdgeColor',[1 1 1],'Location','EO' ) ;
-    
