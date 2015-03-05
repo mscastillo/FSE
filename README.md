@@ -3,10 +3,19 @@ Feature Selection and Extraction (FSE)
 
 This repository includes different analyses to explore high dimensional data using different Machine Learning approaches:
 
- * [PCA and tSNE](#tsne_analysis-octocat)
+ * [Principal Component Analysis (PCA)](#pca_analysis-octocat)
+ * [t-distributed Stochastic Neighbor Embedding (tSNE)](#tsne_analysis-octocat)
+ * [Gaussian Mixture Model (GMM)](#gmm_analysis-octocat)
  * [Decision trees](#tsne_analysis-octocat)
 
 All the analyses takes the same input: a data table with observations at rows and variables at columns. The input table could be provided in any of the next two formats: *[Excel](https://github.com/mscastillo/Analyses/tree/master/Examples/data.xls)* or *[csv](https://github.com/mscastillo/Analyses/tree/master/Examples/data.csv)*. Tables should include a header with the names of the variables. In addition, the first and second columns should have the sample class and a unique sample identifier respectively.
+
+
+# `PCA_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/pca_analysis)
+
+This repository includes a MATLAB script to perform a dimensionality reduction analysis using the *Principal Components* method.
+
+> [Principal component analysis for clustering gene expression data](http://bioinformatics.oxfordjournals.org/content/17/9/763.abstract). *Bioinformatics* (2001).
 
 
 # `tSNE_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
