@@ -25,12 +25,16 @@ Data is read from a table in *CSV* or *Excel* file with the format described bef
 
 The script computes PCA using the singular value decomposition method by using function `pca` from MATLAB's statistichal toolbox. Next are listed the figures and output files:
 
-1. **2D-PCA**. A scatter-plot overlapping the classification resulting from the Quadratic Discriminant Analysis (QDA).
-2. ** 3D-PCA**. A scatter-plot with the three first components. Before plotting them, the components are rotate using the *varimax* transformation to find the optimum orientation.
+1. A scatter-plot with the two first components and the classification resulting from a Quadratic Discriminant Analysis (QDA).
+2. A scatter-plot with the three first components. Before plotting them, the components are rotate using the *varimax* transformation to find the optimum orientation.
 3. A report showing the information content of each componenent (and up to which the 95% of the variance is explained). Data are denoised by substracting the information of the components over the level.
 4. A *CSV* filewill be saved in the same folder of the input data, with the same name and prefix *__PCA*, incluiding the PCA coordinates.
 
-At the end of the script, the program ask if you want to identify a subset of data points in the 2D plot. If you click yes, a new windowwill be opened. Yo can click on each single point one by one and drag over the region you are interested in. Once your selection is done, press <kbd>Enter</kbd> to finish and an additional text file with the names of the data-points will be output. It will be savedwith the name of the input file, in the same folder and the prefix *__superclass*.
+At the end of the script, the program ask if you want to identify a subset of data points in the 2D plot. We refer to this kind subset as *superclass*. If you click yes, a new window is be opened with the PCA scatter-plot. Then, you can click on each single point one by one or drag over the region you are interested in. Once your selection is done, press <kbd>Enter</kbd> to finish and an additional text file with the names of the selected data-points will be output. It will be saved with the name of the input file, in the same folder and the prefix *__superclass*.
+
+### Further analysis
+
+Consider the use of [`gmm_clustering`](https://github.com/mscastillo/Analyses/tree/master/gmm_culstering) to cluster the results.
 
 # `tSNE_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
 
