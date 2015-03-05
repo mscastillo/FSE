@@ -17,6 +17,20 @@ This repository includes a MATLAB script to perform a dimensionality reduction a
 
 > [Principal component analysis for clustering gene expression data](http://bioinformatics.oxfordjournals.org/content/17/9/763.abstract). *Bioinformatics* (2001).
 
+### Input
+
+Data is read from a table in *CSV* or *Excel* file with the format described before.
+
+### Output
+
+The script computes PCA using the singular value decomposition method by using function `pca` from MATLAB's statistichal toolbox. Next are listed the figures and output files:
+
+1. **2D-PCA**. A scatter-plot overlapping the classification resulting from the Quadratic Discriminant Analysis (QDA).
+2. ** 3D-PCA**. A scatter-plot with the three first components. Before plotting them, the components are rotate using the *varimax* transformation to find the optimum orientation.
+3. A report showing the information content of each componenent (and up to which the 95% of the variance is explained). Data are denoised by substracting the information of the components over the level.
+4. A *CSV* filewill be saved in the same folder of the input data, with the same name and prefix *__PCA*, incluiding the PCA coordinates.
+
+At the end of the script, the program ask if you want to identify a subset of data points in the 2D plot. If you click yes, a new windowwill be opened. Yo can click on each single point one by one and drag over the region you are interested in. Once your selection is done, press <kbd>Enter</kbd> to finish and an additional text file with the names of the data-points will be output. It will be savedwith the name of the input file, in the same folder and the prefix *__superclass*.
 
 # `tSNE_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
 
