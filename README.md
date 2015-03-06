@@ -93,3 +93,8 @@ The script fits the data to a GMM with diferent modes, from one to the total num
 # `BDT_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
 
 This repository performs a emsembled classificator using a *Bagger Decision Tree* (BDT).
+
+
+# `GMM_clustering` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/GMM_clustering)
+
+![Clustering using GMM](https://raw.githubusercontent.com/mscastillo/FSE/master/Examples/gmm_clustering.jpg)
