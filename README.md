@@ -70,6 +70,13 @@ The script outputs the next files and figures:
 
 Consider the use of [`gmm_clustering`](https://github.com/mscastillo/Analyses/tree/master/gmm_culstering) to cluster the results using Gaussian Mixture Models.
 
+# `GMM_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/GMM_analysis)
+
+This repository includes a scripts to perform a *Gaussian Mixture Model* (GMM) analysis to decompose qPCR data into Gaussian signals.
+
+> [Mixture-model based estimation of gene expression variance](https://dx.doi.org/10.1093/bioinformatics/btp685). *Bioinformatics* (2010).
+
+
 # `BDT_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
 
 This repository performs a emsembled classificator using a *Bagger Decision Tree* (BDT).
