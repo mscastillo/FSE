@@ -26,7 +26,7 @@ Data is read from a table in *CSV* or *Excel* file with the format described bef
 The script computes PCA using the singular value decomposition method by using function `pca` from MATLAB's statistichal toolbox. Next are listed the figures and output files:
 
 1. A scatter-plot with the two first components and the classification resulting from a Quadratic Discriminant Analysis (QDA).
-2. A scatter-plot with the three first components. Before plotting them, the components are rotate using the *varimax* transformation to find the optimum orientation.
+2. A scatter-plot with the three first components. Before plotting them, the components are rotate using the  [*varimax*](http://pareonline.net/pdf/v10n7.pdf) transformation to find the optimum orientation.
 3. A report showing the information content of each componenent (and up to which the 95% of the variance is explained).
 4. A *CSV* file, in the same folder of the input data with same name and prefix *__PCA*, with the PCA coordinates. See example [here](https://github.com/mscastillo/FSE/blob/master/Examples/data__PCA.csv).
 ![PCA analysis](https://raw.githubusercontent.com/mscastillo/FSE/master/Examples/PCA.jpg)
@@ -62,7 +62,7 @@ The script outputs the next files and figures:
 2. A scatter-plot with the 3D PCA plot. Data are rotated using *varimax* transformation to find the optimum orientation.
 3. A report showing the information content of each componenent (and up to which the given percentage of the variance is explained).
 4.  A scatter-plot with the 2D tSNE and the classification from the Quadratic Discriminant Analysis (QDA). Coordinates are also saved to a file in the same folder than the input file.
-5.  A scatter-plot with the 3D tSNE plot. Data are rotated using *varimax* transformation. Coordinates are also saved to a file in the same folder than the input file.
+5.  A scatter-plot with the 3D tSNE plot. Data are rotated using [*varimax*](http://pareonline.net/pdf/v10n7.pdf) transformation. Coordinates are also saved to a file in the same folder than the input file.
 ![2D and 3D tSNE plots](https://raw.githubusercontent.com/mscastillo/FSE/master/Examples/tSNE.jpg)
 6. Before plotting the 3D tSNE, users may interact with the 2D plot to manually pick a subset of samples. We refer to this subsets as *superclass*. During selection, click on each single point one by one or drag over the region you are interested in. Once your selection is done, press <kbd>Enter</kbd> to finish. A text file with the names of the selected data-points will be output. It will be saved with the name of the input file, in the same folder and the prefix *__tSNE_superclass*. An example of this output can be found [here](https://github.com/mscastillo/FSE/blob/master/Examples/data__tSNE_superclass.txt).
 
