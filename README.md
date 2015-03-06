@@ -47,15 +47,14 @@ This repository includes a set of scripts to perform a dimensionality reduction 
 
 The main script, `tSNE_analysis.m`, depends on the [MATLAB implementation](http://lvdmaaten.github.io/tsne/) of the tSNE method. The original code from the tSNE algorithm can be found in [Simple_tSNE/](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis/Simple_tSNE). Before running the program check on *SETTINGS*, at the begining of the main script, that the path is correct.
 
-The method preprocesses the data using PCA and choosing a given number of initial dimensions to compute an initial solution. Instead of choosing an arbitrary number of components, the main script performs PCA and chooses the number of components comprising a given level of variability. By default, this level is set to keep the 95% of the variance. To skip the preprocessing step, set this variable to 100% on *PARAMETERS*. 
-
-tSNE is an stochastic method that will produce a different result every time. For repeatability, the randomness is controlled by fixing the seed of the random generator. For convenience, PCA and tSNE results are rotated using the varimax transformation.
- 
 > [Best Practices in Exploratory Factor Analysis](http://pareonline.net/pdf/v10n7.pdf). *Practical Assessment, Research & Evaluation* (2005).
 
 ### Input
 
-Data is read from a table in *CSV* or *Excel* file with the format described before.
+Data is read from a table in *CSV* or *Excel* file with the format described before. A pick-file menu will be displayed once you run the script. Next are listed a set of parameters that you can set up:
+
+1. `PCA_level`, the percentage of variace to keep for data preprocessing. The tSNE method preprocesses the input data using PCA and choosing a given number of initial dimensions to compute an initial solution. Instead of choosing an arbitrary number of components, the program performs PCA and chooses the number of components comprising a given level of variability. By default, this level is set to keep the 95% of the variance. To skip the preprocessing step, set this variable to 100%.
+2. `seed`, the random generator's seed. tSNE is an stochastic method that will produce a different result every time. For repeatability, the randomness is controlled by fixing the seed of the random generator. By default,it set as zero. Use any other value to generate alternative solutions.
 
 ### Output
 
