@@ -91,7 +91,7 @@ disp( ['================================'] ) ; disp( char(10) ) ;
   output_file = strjoin([input_path,file_name,'__qPCR_analysis.csv'],'') ;
   text_to_file = ['gene'] ;
   for c = 1:C
-    text_to_file = [text_to_file,['\t','mean_',num2str(c),char(177),'std_',num2str(c)]] ;
+    text_to_file = [text_to_file,[',','mean_',num2str(c),char(177),'std_',num2str(c)]] ;
   end%for
   fileID = fopen(output_file,'w') ;
   fprintf(fileID,[text_to_file,char(10)]) ;
@@ -144,7 +144,7 @@ disp( ['================================'] ) ; disp( char(10) ) ;
     hold off ; 
   % saving results ========================================================   
     fileID = fopen(output_file,'a') ;
-    fprintf(fileID,[strjoin(text_to_file,'\t'),char(10)]) ;
+    fprintf(fileID,[strjoin(text_to_file,','),char(10)]) ;
     fclose(fileID) ;
     set( gcf,'PaperPosition',[-0.5 -0.25 30+[1 0.5]] ) ; 
     set( gcf,'PaperSize',[0 0]+30) ;
