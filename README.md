@@ -87,7 +87,8 @@ Data is read from a table in *CSV* or *Excel* file with the format described bef
 The script fits the data to a GMM with diferent modes, from one to the total number of classes in the data, for each single gene using [`gmdistribution`](http://uk.mathworks.com/help/stats/gmdistribution.fit.html?refresh=true) from Matlab's statistical toolbox. For each of the GMM, the [Akaike's information criterion](http://en.wikipedia.org/wiki/Akaike_information_criterion) is computed and the model that minimises it is reported. Next are listed the figures and output files:
 
 1. A figure with 3x3 subplot showing the expression profiles for each single gene across all the samples (in black) and for each of the classes (in different colors). The GMM are overlap, with each of the independent modes in different colors. The mean of each Gaussian is marked in the *x*-axis with a triangle. Each figure is saved as a PDF in the same folder of the input file, with the same name and the prefix *__qPCR*.
-2. A *CSV* file with the hyperpameters of the GMM for each gene.
+![GMM analysis](https://raw.githubusercontent.com/mscastillo/FSE/master/Examples/gmm_analysis.jpg)
+2. A *CSV* file with the hyperpameters of the GMM for each gene. An example of this output can be found [here](https://github.com/mscastillo/FSE/blob/master/Examples/data__qPCR_analysis.csv).
 
 # `BDT_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
 
