@@ -60,6 +60,7 @@ Data is read from a table in *CSV* or *Excel* file with the format described bef
 ### Output
 
 `tSNE_analysis.m` computes PCA to initialise the tSNE solution. The script outputs:
+
 1. A scatter-plot with the 2D PCA and the classification from the Quadratic Discriminant Analysis (QDA).
 2. A scatter-plot with the 3D PCA plot. Data are rotated using *varimax* transformation to find the optimum orientation.
 3. A report showing the information content of each componenent (and up to which the given percentage of the variance is explained).
