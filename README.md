@@ -76,6 +76,18 @@ This repository includes a scripts to perform a *Gaussian Mixture Model* (GMM) a
 
 > [Mixture-model based estimation of gene expression variance](https://dx.doi.org/10.1093/bioinformatics/btp685). *Bioinformatics* (2010).
 
+### Input
+
+Data is read from a table in *CSV* or *Excel* file with the format described before. A pick-file menu will be displayed once you run the script. Next are listed a set of parameters that you can set up:
+
+1. `seed`, the random generator's seed. tSNE is an stochastic method that will produce a different result every time. For repeatability, the randomness is controlled by fixing the seed of the random generator. By default,it set as zero. Use any other value to generate alternative solutions.
+
+### Output
+
+The script fits the data to a GMM with diferent modes, from one to the total number of classes in the data, for each single gene using [`gmdistribution`](http://uk.mathworks.com/help/stats/gmdistribution.fit.html?refresh=true) from Matlab's statistical toolbox. For each of the GMM, the [Akaike's information criterion](http://en.wikipedia.org/wiki/Akaike_information_criterion) is computed and the model that minimises it is reported. Next are listed the figures and output files:
+1. A figure with 3x3 subplot showing the expression profiles for each single gene across all the samples (in black) and for each of the classes (in different colors). The GMM are overlap, with each of the independent modes in different colors. The mean of each Gaussian is marked in the x-axis with a triangle. Each figure is saved as a PDF in the same folder of the input file, with the same name and the prefix *__qPCR*.
+2. 
+
 
 # `BDT_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
 
