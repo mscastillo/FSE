@@ -34,7 +34,7 @@ At the end of the script, the program ask if you want to identify a subset of da
 
 ### Further analysis
 
-Consider the use of [`gmm_clustering`](https://github.com/mscastillo/Analyses/tree/master/gmm_culstering) to cluster the results.
+Consider the use of [`gmm_clustering`](https://github.com/mscastillo/Analyses/tree/master/gmm_culstering) to cluster the results using Gaussian Mixture Models.
 
 # `tSNE_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
 
