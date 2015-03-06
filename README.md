@@ -67,7 +67,7 @@ Data is read from a table in *CSV* or *Excel* file with the format described bef
 4.  A scatter-plot with the 2D tSNE and the classification from the Quadratic Discriminant Analysis (QDA). Coordinates are also saved to a file in the same folder than the input file.
 5.  A scatter-plot with the 3D tSNE plot. Data are rotated using *varimax* transformation. Coordinates are also saved to a file in the same folder than the input file.
 ![2D and 3D tSNE plots](https://raw.githubusercontent.com/mscastillo/FSE/master/Examples/tSNE.jpg)
-6. Before plotting the 3D tSNE, users may interact with the 2D plot to manually pick a subset of samples. We refer to this subsets as *superclass*. During selection, click on each single point one by one or drag over the region you are interested in. Once your selection is done, press <kbd>Enter</kbd> to finish. A text file with the names of the selected data-points will be output. It will be saved with the name of the input file, in the same folder and the prefix *__tSNE_superclass*. An example of this output can be found
+6. Before plotting the 3D tSNE, users may interact with the 2D plot to manually pick a subset of samples. We refer to this subsets as *superclass*. During selection, click on each single point one by one or drag over the region you are interested in. Once your selection is done, press <kbd>Enter</kbd> to finish. A text file with the names of the selected data-points will be output. It will be saved with the name of the input file, in the same folder and the prefix *__tSNE_superclass*. An example of this output can be found [here](https://github.com/mscastillo/FSE/blob/master/Examples/data__tSNE_superclass.txt).
 
 ### Further analysis
 
