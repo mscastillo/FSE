@@ -1,14 +1,16 @@
 Feature Selection and Extraction (FSE)
 ======================================
 
-This repository includes different analyses to explore high dimensional data using different Machine Learning approaches:
+This repository includes different analyses to explore gene expression data using different Machine Learning approaches:
 
  * [Principal Component Analysis (PCA)](#pca_analysis-octocat)
  * [t-distributed Stochastic Neighbor Embedding (tSNE)](#tsne_analysis-octocat)
- * [Gaussian Mixture Model (GMM)](#gmm_analysis-octocat)
+ * [Gaussian Mixture Model (GMM) analysis](#gmm_analysis-octocat)
  * [Decision trees](#tsne_analysis-octocat)
 
-All the analyses takes the same input: a data table with observations at rows and variables at columns. The input table could be provided in any of the next two formats: *[Excel](https://github.com/mscastillo/Analyses/tree/master/Examples/data.xls)* or *[csv](https://github.com/mscastillo/Analyses/tree/master/Examples/data.csv)*. Tables should include a header with the names of the variables. In addition, the first and second columns should have the sample class and a unique sample identifier respectively.
+All the analyses listed above takes the same input: a data table with observations at rows and variables at columns. The input table could be provided in any of the next two formats: *[Excel](https://github.com/mscastillo/Analyses/tree/master/Examples/data.xls)* or *[csv](https://github.com/mscastillo/Analyses/tree/master/Examples/data.csv)*. Tables should include a header with the names of the variables. In addition, the first and second columns should have the sample class and a unique sample identifier respectively.
+
+Apart from this repository, you might consider to have a look to [Classification/](https://github.com/mscastillo/Classification) for additional further analyses.
 
 
 # `PCA_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/pca_analysis)
@@ -34,7 +36,7 @@ The script computes PCA using the singular value decomposition method by using f
 
 ### Further analysis
 
-Consider the use of [`gmm_clustering`](https://github.com/mscastillo/Analyses/tree/master/gmm_culstering) to cluster the results using Gaussian Mixture Models. You can also use any of the SVM scripts from [`Classification/`](https://github.com/mscastillo/Classification) to compute a boundary in bewtween two subpopulations.
+Consider the use of `GMM_clustering` from [Classification/](https://github.com/mscastillo/Classification) to cluster the results using Gaussian Mixture Models or any of thr SVM scripts from to compute a boundary in bewtween two subpopulations.
 
 
 # `tSNE_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
@@ -94,8 +96,3 @@ The script fits the data to a GMM with diferent modes, from one to the total num
 # `BDT_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
 
 This repository performs a emsembled classificator using a *Bagger Decision Tree* (BDT).
-
-
-# `GMM_clustering` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/GMM_clustering)
-
-![Clustering using GMM](https://raw.githubusercontent.com/mscastillo/FSE/master/Examples/gmm_clustering.jpg)
