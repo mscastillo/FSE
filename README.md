@@ -32,9 +32,7 @@ The script computes PCA using the singular value decomposition method by using f
 
 ![PCA analysis](https://raw.githubusercontent.com/mscastillo/FSE/master/Examples/PCA.jpg)
 
-At the end of the script, the program asks if you want to identify a subset of data points in the 2D plot. We refer to this kind subset as *superclass*. If you click yes, a new window is be opened with the PCA scatter-plot. Then, you can click on each single point one by one or drag over the region you are interested in. Once your selection is done, press <kbd>Enter</kbd> to finish and an additional text file with the names of the selected data-points will be output. It will be saved with the name of the input file, in the same folder and the prefix *__superclass*. An example of the output can be found [here](https://github.com/mscastillo/FSE/blob/master/Examples/data__PCA_superclass.txt).
-
-![Identifying superclass in PCA plot](https://raw.githubusercontent.com/mscastillo/FSE/master/Examples/superclass.jpg)
+5. At the end of the script, the program asks if you want to identify a subset of data points in the 2D plot. We refer to this kind subset as *superclass*. If you click yes, a new window is be opened with the PCA scatter-plot. Then, you can click on each single point one by one or drag over the region you are interested in. Once your selection is done, press <kbd>Enter</kbd> to finish and an additional text file with the names of the selected data-points will be output. It will be saved with the name of the input file, in the same folder and the prefix *__superclass*. An example of this output can be found [here](https://github.com/mscastillo/FSE/blob/master/Examples/data__PCA_superclass.txt).
 
 ### Further analysis
 
