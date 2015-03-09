@@ -96,13 +96,13 @@ The script fits the data to a GMM with diferent modes, from one to the total num
 
 # `BDT_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/BDT_analysis)
 
-This repository performs a emsembled classificator using a *Bagger Decision Tree* (BDT). Note that a [BDT is not a random forest](http://en.wikipedia.org/wiki/Random_forest#Algorithm). 
+This repository performs an emsembled classificator using a *Bagger Decision Tree* (BDT). Note that a [BDT is not a random forest](http://en.wikipedia.org/wiki/Random_forest#Algorithm). 
 
 > [A comparative study of different machine learning methods on microarray gene expression data](http://www.biomedcentral.com/1471-2164/9/S1/S13). BMC Genomics (2008).
 
 ### Input
 
-Data is read from a table in *CSV* or *Excel* file with the format described before. A pick-file menu will be displayed once you run the script. Next are listed a set of parameters that you can set up:
+Data is read from a table in *CSV* or *Excel* file with the format described before. A pick-file menu will be displayed once you run the script. Next are listed a set of parameters that you can tune:
 
 1. `NoDT`, the Number of Decission Trees to train the classifier. By default is set to 100.
 
