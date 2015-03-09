@@ -119,7 +119,7 @@ The script outputs a set of plots with statistics measuring the stability of the
 5. The variable relevance, measured as the increase in the OOB error when the values of the variables are permutted for every tree, then averaged over the entire ensemble and lastly divided by the standard deviation.
 6. ROC curve, the *Receiver Operating Characteristic* (ROC) curve illustrates the performance of the BDT by analysing the trade off between *sensitivity* and *specificcity*. The no-discrimination (ND) line is the theoretical behaviour when classes are randomly asingned. The higher the area under the ROC curves the better the performance.
 7. Similarly to the ROC curve, the Precission Recall (PR) curve summarises the behaviour of the classifier.
-![BDT evaluation]https://raw.githubusercontent.com/mscastillo/FSE/master/Examples/bdt_stats.jpg)
+![BDT evaluation](https://raw.githubusercontent.com/mscastillo/FSE/master/Examples/bdt_stats.jpg)
 8. The BDT as a tree plot.
 9. Finally, the script allows you to track a subpopulation across the BDT. We refer to this subpopulation as a super-class. To see how a superclass is partitioned along the BDT, say *Yes* on the dialog menu and pick a one-column text file with the identifiers of the data points you want to track. Only the leaves of the trees with any of these data points will be displayed. Each subpopulation within the superclass will be displayed as a circle of different color. The sizes of the circles at each node are proportional to the number of samples in the superclass.
-![BDT results]https://raw.githubusercontent.com/mscastillo/FSE/master/Examples/bdt.jpg)
+![BDT results](https://raw.githubusercontent.com/mscastillo/FSE/master/Examples/bdt.jpg)
