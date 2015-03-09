@@ -140,7 +140,7 @@ end%for
    hold on
      plot(1:k,AIC(1:k),'b.-') ;
      if ( k > 1 )
-%        [~,k_optimum] = min( abs( 0.5*diff(AIC)./(AIC(1:end-1)+AIC(2:end)) ) ) ; k_optimum = k_optimum+1 ;
+        [~,k_optimum] = min( abs( 0.5*diff(AIC)./(AIC(1:end-1)+AIC(2:end)) ) ) ; k_optimum = k_optimum+1 ;
          k_first=find( abserror < 1e-3,1,'first' ) ; k_last=find( abserror < 1e-3,1,'last' ) ;
          
          if( numel(find( abserror < 1e-3 )) == k_last-k_first ) ; k_optimum = [ k_optimum ; k ] ; end%if ;
