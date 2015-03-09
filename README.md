@@ -89,10 +89,37 @@ Data is read from a table in *CSV* or *Excel* file with the format described bef
 The script fits the data to a GMM with diferent modes, from one to the total number of classes in the data, for each single gene using [`gmdistribution`](http://uk.mathworks.com/help/stats/gmdistribution.fit.html?refresh=true) from Matlab's statistical toolbox. For each of the GMM, the [Akaike's information criterion](http://en.wikipedia.org/wiki/Akaike_information_criterion) is computed and the model that minimises it is reported. Next are listed the figures and output files:
 
 1. A figure with 3x3 subplot showing the density of the expression profiles for each single gene across all the samples (in black) and for each of the classes (in different colors). The GMM are overlap, with each of the independent modes in different colors. The mean of each Gaussian is marked in the *x*-axis with a triangle. Each figure is saved as a *PDF* in the same folder of the input file, with the same name and the prefix *__qPCR*. An example of this output can be found [here](https://github.com/mscastillo/FSE/blob/master/Examples).
-2. A *CSV* file with the hyperpameters of the GMM for each gene. An example of this output can be found [here](https://github.com/mscastillo/FSE/blob/master/Examples/data__qPCR_analysis.csv).
+2. A *CSV* file with the [hyperparameters](http://en.wikipedia.org/wiki/Mixture_model#Multivariate_Gaussian_mixture_model) of the GMM for each of the genes: (*i*) the *mean* and (*ii*) the *standard deviation* (the squared root of the variance). An example of this output can be found [here](https://github.com/mscastillo/FSE/blob/master/Examples/data__qPCR_analysis.csv).
 
 ![GMM analysis](https://raw.githubusercontent.com/mscastillo/FSE/master/Examples/gmm_analysis.jpg)
 
-# `BDT_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
 
-This repository performs a emsembled classificator using a *Bagger Decision Tree* (BDT).
+# `BDT_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/BDT_analysis)
+
+This repository performs a emsembled classificator using a *Bagger Decision Tree* (BDT). Note that a [BDT is not a random forest](http://en.wikipedia.org/wiki/Random_forest#Algorithm). 
+
+> [A comparative study of different machine learning methods on microarray gene expression data](http://www.biomedcentral.com/1471-2164/9/S1/S13). BMC Genomics (2008).
+
+### Input
+
+Data is read from a table in *CSV* or *Excel* file with the format described before. A pick-file menu will be displayed once you run the script. Next are listed a set of parameters that you can set up:
+
+1. `NoDT`, the Number of Decission Trees to train the classifier. By default is set to 100.
+
+2. `seed`, the random generator's seed. For repeatability, the randomness is controlled by fixing the seed of the random generator. By default,it set as zero. Use any other value to generate alternative solutions.
+
+### Output
+
+The script outputs a set of plots with statistics measuring the stability of the BDT and assessing the results.
+
+1. Biased evaluation of the BDT by predicting the classes of the trainning data set.
+2. Fair evaluation of the BDT by predicting the out-of-bag (OOB) observations.
+3. Evaluation of the stability of the BDT by computing the OOB error (missclasication probability) and the margin (the difference between the score for the actual class and the largest one for other classes) for each individual tree and the cumulative value for a given number of trees.
+4. The predictor importance, that averages the changes in the risk due to split on every predictor at each node for the whole ensemble. This risk depends on the seleted split criterion (typically GDI that measure the impurity of the node).
+5. The variable relevance, measured as the increase in the OOB error when the values of the variables are permutted for every tree, then averaged over the entire ensemble and lastly divided by the standard deviation.
+6. ROC curve, the *Receiver Operating Characteristic* (ROC) curve illustrates the performance of the BDT by analysing the trade off between *sensitivity* and *specificcity*. The no-discrimination (ND) line is the theoretical behaviour when classes are randomly asingned. The higher the area under the ROC curves the better the performance.
+7. Similarly to the ROC curve, the Precission Recall (PR) curve summarises the behaviour of the classifier.
+![BDT evaluation]https://raw.githubusercontent.com/mscastillo/FSE/master/Examples/bdt_stats.jpg)
+8. The BDT as a tree plot.
+9. Finally, the script allows you to track a subpopulation across the BDT. We refer to this subpopulation as a super-class. To see how a superclass is partitioned along the BDT, say *Yes* on the dialog menu and pick a one-column text file with the identifiers of the data points you want to track. Only the leaves of the trees with any of these data points will be displayed. Each subpopulation within the superclass will be displayed as a circle of different color. The sizes of the circles at each node are proportional to the number of samples in the superclass.
+![BDT results]https://raw.githubusercontent.com/mscastillo/FSE/master/Examples/bdt.jpg)
