@@ -36,7 +36,7 @@ The script computes PCA using the singular value decomposition method by using f
 
 ### Further analysis
 
-Consider the use of `GMM_clustering` from [Classification/](https://github.com/mscastillo/Classification) to cluster the results using Gaussian Mixture Models or any of thr SVM scripts from to compute a boundary in bewtween two subpopulations.
+Consider the use of `GMM_clustering` from [Classification/](https://github.com/mscastillo/Classification) to cluster the results using Gaussian Mixture Models or any of thr SVM scripts from to compute a boundary in bewtween two subpopulations. If you have selected a superclass, you might consider to use the [BDT analysis](https://github.com/mscastillo/FSE#bdt_analysis-octocat).
 
 
 # `tSNE_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/tSNE_analysis)
@@ -70,7 +70,7 @@ The script outputs the next files and figures:
 
 ### Further analysis
 
-Consider the use of [`gmm_clustering`](https://github.com/mscastillo/Analyses/tree/master/gmm_culstering) to cluster the results using Gaussian Mixture Models. You can also use any of the SVM scripts from [`Classification/`](https://github.com/mscastillo/Classification) to compute a boundary in bwtween two subpopulations.
+Consider the use of [`gmm_clustering`](https://github.com/mscastillo/Analyses/tree/master/gmm_culstering) to cluster the results using Gaussian Mixture Models. You can also use any of the SVM scripts from [`Classification/`](https://github.com/mscastillo/Classification) to compute a boundary in bwtween two subpopulations. If you have selected a superclass, you might consider to use the [BDT analysis](https://github.com/mscastillo/FSE#bdt_analysis-octocat).
 
 # `GMM_analysis` [:octocat:](https://github.com/mscastillo/Analyses/tree/master/GMM_analysis)
 
