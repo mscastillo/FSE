@@ -278,9 +278,9 @@ for k = 1:C
     ylim( [y_min y_max] ) ; ylabel('tSNE2') ;
     legend( 'Location','EO' ) ;
     h=gname(names,5) ;
-    superclass=get(h,'String') ;
+    superclass=get(h,'String') ; superclass=unique([superclass{:}]) ;
     fileID = fopen( strjoin( [ input_path,file_name,'__superclass.txt' ],'' ),'w' ) ;
-    fprintf(fileID,'%s\r\n',superclass{:}) ;
+    fprintf(fileID,'%s\r\n',superclass) ;
     fclose(fileID) ;  
     choice = questdlg(['You have selected ',num2str(size(h,1)),' data points.',char(10),'Do you want to keep this selection or do you want to try it again'],'Are you Happy with your selection?','Yes, it is fine','No, I want to do it again','No, I want to do it again');
     end%while
